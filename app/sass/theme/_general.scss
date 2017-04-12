@@ -1,0 +1,146 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+  height: 100%;
+  font-weight: 300;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+h1, h2, h3 {
+  font-family: 'acrom', sans-serif;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+
+/*slanting background*/
+/*768*/
+@media (min-width: 768px) {
+  .slanting-bg {
+    background: {
+      image: url("../img/slanting-bg.png");
+      position: -15px -90px;
+      repeat: no-repeat;
+      size: initial;
+    }
+  }
+}
+
+/*headings with rectangle-logo*/
+.title {
+  font-size: 26px;
+  position: relative;
+  padding-left: 60px;
+  margin-top: 30px;
+
+  &:before {
+    content: "";
+    background-image: url("../img/heading-rectangle.png");
+    height: 52px;
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    left: 0;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+@mixin center-title {
+  text-align: center;
+  &:before {
+    position: static;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+/*links with arrow*/
+.link {
+  font-family: "acrom", sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  color: #439c92;
+  border-bottom: 1px solid #439c92;
+  border-radius: 0.5px;
+  position: relative;
+  &:after {
+    content: "";
+    background-image: url("../img/arrow-right.png");
+    width: 21px;
+    height: 8px;
+    position: absolute;
+    right: -30px;
+    top: 8px;
+  }
+}
+
+button{
+  &:focus {
+    outline: none;
+  }
+}
+
+/*flex-box*/
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*placeholder*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $white;
+}
+
+
+
+
+
+

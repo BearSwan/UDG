@@ -1,0 +1,32 @@
+/*FONTS*/
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/roboto-light.woff2') format('woff2'),
+  url('../../fonts/roboto-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/roboto-bold.woff2') format('woff2'),
+  url('../../fonts/roboto-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'acrom';
+  src: url('../fonts/the_northern_block_-_acrom_extrabold.woff2') format('woff2'),
+  url('../fonts/the_northern_block_-_acrom_extrabold.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'acrom';
+  src: url('../fonts/the_northern_block_-_acrom_light.woff2') format('woff2'),
+  url('../fonts/the_northern_block_-_acrom_light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}

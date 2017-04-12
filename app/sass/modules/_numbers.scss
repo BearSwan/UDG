@@ -1,0 +1,93 @@
+.statistic {
+  background: {
+    image: url('../img/numbers-bg.jpg');
+    position: center center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  position: relative;
+  padding: 40px 0;
+  &:after {
+    content: '';
+    background-color: rgba(#0f5b58, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+  }
+  &-item {
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+  }
+  &-number {
+    display: block;
+    font-family: "acrom", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: $white;
+  }
+  &-text {
+    font-size: 17px;
+    color: $white;
+  }
+}
+.land {
+  border-top: $numb-border;
+  border-bottom: $numb-border;
+}
+
+/*MEDIA 768*/
+@media (min-width: 768px) {
+  .statistic {
+    background-attachment: fixed;
+    /*inner*/
+    &-item {
+      width: 33.3333%;
+    }
+    &-inner {
+      flex-direction: row;
+    }
+
+    &-number {
+      font-size: 75px;
+    }
+    &-text {
+      font-size: 19px;
+    }
+  }
+  .land {
+    border: none;
+    border-left: $numb-border;
+    border-right: $numb-border;
+  }
+}
+/*MEDIA 1200*/
+@media (min-width: 1200px) {
+  .statistic {
+    padding: 70px 0;
+
+    &-inner {
+      margin: 0 95px;
+    }
+    &-item {
+      height: 190px;
+    }
+  }
+  .dol {
+    border-left: $numb-border;
+  }
+  .years {
+    border-right: $numb-border;
+  }
+}

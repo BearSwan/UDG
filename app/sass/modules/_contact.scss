@@ -1,0 +1,148 @@
+.contact {
+  background-color: #F3FAFA;
+  padding-top: 30px;
+
+  &-info {
+
+    &-main {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &_item {
+      display: block;
+      position: relative;
+      padding-left: 40px;
+      background: {
+        repeat: no-repeat;
+        size: 19px;
+      };
+
+      &:not(:last-child){
+        margin-bottom: 40px;
+      }
+
+      &.address{
+        background-image: url('../../img/footer-map.png');
+      }
+
+      &.phone {
+        font-weight: 900;
+        background-image: url('../../img/footer-phone.png');
+      }
+
+      &.mail{
+        background-image: url('../../img/footer-mail.png');
+        text-decoration: underline;
+        font-weight: 900;
+        color: $green;
+      }
+    }
+  }
+
+  /*form*/
+  &-form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &_input {
+      height: 50px;
+      margin-bottom: 20px;
+      font-size: 17px;
+      font-weight: bold;
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #989b9c;
+      padding: 5px 0;
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid #439c92;
+        + label {
+          top: -15px;
+          font-size: 10px;
+        }
+      }
+
+      &:valid {
+        + label {
+          top: -15px;
+          font-size: 10px;
+        }
+      }
+
+      &-wrap {
+        position: relative;
+      }
+    }
+
+    &_label {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      color: #989b9c;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+/*MEDIA 768*/
+@media (min-width: 768px) {
+
+  .contact {
+    .title{
+      text-align: center;
+    }
+
+    &-info-main {
+      width: 190px;
+      margin: 30px auto;
+    }
+
+    &-form_btn {
+      width: 30%;
+    }
+
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .contact {
+
+    .title {
+      @include center-title;
+    }
+  }
+}
+
+/*MEDIA 1200*/
+@media (min-width: 1200px) {
+  .contact {
+    padding: 90px 0 60px;
+
+    .title {
+      text-align: left;
+    }
+
+    &-info-main {
+      width: auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &-form_btn {
+      width: 40%;
+    }
+
+  }
+
+  .write_us {
+    text-align: left;
+  }
+
+  .contact-info-main, .contact-form {
+    margin-left: 65px;
+  }
+}
+

@@ -1,0 +1,163 @@
+.intro {
+  // padding: 140px 0 85px 0;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+
+  &-slider {
+    height: 100%;
+  }
+
+  &-item {
+    height: 100%;
+    background: {
+      image: url("../img/header-bg.jpg");
+      position: center center;
+      repeat: no-repeat;
+      size: cover;
+      }
+
+    .container {
+      height: 100%;
+      padding-top: 140px;
+    }
+  ;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../img/mask2.png');
+      z-index: 1;
+    }
+
+    &:nth-child(2) {
+      background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2016/01/Los-Angeles-Wallpaper-4.jpg");
+    }
+
+    &:nth-child(3) {
+      background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2015/05/Rome-wallpaper-11.jpg");
+    }
+
+    &:nth-child(4) {
+      background-image: url("http://www.infohostels.com/immagini/news/2472.jpg");
+    }
+  }
+
+  &-scroll {
+    display: none;
+    position: absolute;
+    right: 50%;
+    bottom: 45px;
+  }
+
+  &-content {
+    position: relative;
+    margin-left: 15px;
+
+
+
+    &_title {
+      padding: 60px 30px 20px;
+      font-size: 40px;
+      line-height: 40px;
+      color: $white;
+      border-left: 5px solid $yellow;
+      position: relative;
+      z-index: 5;
+      text-transform: uppercase;
+    }
+
+  }
+
+}
+/*counter for slider*/
+.counter {
+  display: flex;
+  align-items: baseline;
+  left: 60px;
+  top: 10px;
+  position: absolute;
+  color: $white;
+  z-index: 100;
+  &-of {
+    margin: 0 10px;
+  }
+}
+
+.current {
+  color: $yellow;
+}
+
+.current, .quantity {
+  font-size: 23px;
+}
+
+.current, .counter-of, .quantity {
+  float: left;
+}
+
+
+@media (min-width: 768px) {
+  .intro{
+
+    &-item {
+
+      .container {
+        padding-top: 180px;
+      }
+    }
+  }
+}
+
+/*MEDIA 1200*/
+  @media (min-width: 1200px) {
+    .intro {
+      height: 100%;
+      min-height: 600px;
+      max-height: 802px;
+      &-item {
+
+        .container {
+
+        }
+      }
+        &-content {
+          position: relative;
+          z-index: 150;
+
+          &_title {
+            margin-top: 50px;
+            padding: 70px 55px 30px;
+            font-size: 65px;
+            line-height: 70px;
+          }
+        }
+
+      &-scroll {
+        animation: dragger 2s forwards infinite;
+        display: block;
+      }
+      }
+
+    .counter {
+      left: 85px;
+    }
+  }
+
+@keyframes dragger {
+  0%{
+    transform: translateY(5px);
+  }
+
+  70%{
+    transform: translateY(0px);
+  }
+
+  100%{
+    transform: translateY(5px);
+  }
+}

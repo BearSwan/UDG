@@ -1,0 +1,126 @@
+.footer {
+  /*socials*/
+  &-social {
+
+    &_item {
+      display: inline-block;
+      a {
+        background: no-repeat center center ;
+        width: 30px;
+        height: 30px;
+        display: block;
+      }
+    }
+  }
+
+  /*copyright*/
+  &-copyright {
+    display: block;
+    width: 100%;
+    background-color: $green;
+    color: rgba($white, .7);
+    padding: 20px 0;
+    text-align: center;
+
+    &_lg {
+      display: none;
+    }
+  }
+
+  /*socials*/
+  &-social {
+    text-align: center;
+    padding: 25px 0 15px;
+  }
+
+  /*company*/
+  &-company {
+    display: block;
+    background-color: rgba($black, .8);
+    text-align: center;
+    font-family: "acrom", sans-serif;
+    font-size: 13px;
+    color: rgba($white, .6);
+    padding: 25px 0 15px;
+
+    &_text {
+      position: relative;
+      padding-right: 42px;
+
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 30px;
+        height: 15px;
+        background-image: url("../../img/otakoyi.png");
+        background-repeat: no-repeat;
+      }
+
+      a {
+        color: rgba($white, .6);
+        &:active,
+        &:focus {
+          color: rgba($white, .6);
+        }
+      }
+
+      b {
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+    }
+  }
+}
+.footer-social_item + .footer-social_item {
+  margin-left: 25px;
+}
+.company-by {
+  font-family: "acrom", sans-serif;
+  font-weight: 300;
+}
+
+/*SOCIALS ICON*/
+$socials : fb, tw, vk;
+
+@each $social in $socials {
+  $i: index($socials, $social);
+  .footer-social_item .#{$social} {
+    background-image: url("../img/"+ $social +"-icon.png");
+  }
+}
+
+/*MEDIA 768*/
+@media (min-width: 768px) {
+ .footer {
+   padding: 10px 15px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: rgba($black, .8);
+
+   &-copyright, &-social, &-company {
+     padding: 0;
+     background-color: transparent;
+     width: 33.333%;
+   }
+
+   /*copyright*/
+   &-copyright {
+     text-align: left;
+   }
+
+   /*company*/
+   &-company {
+    text-align: right;
+   }
+ }
+}
+
+/*MEDIA 1200*/
+@media (min-width: 1200px) {
+  .footer-copyright_lg {
+    display: inline-block;
+  }
+}
